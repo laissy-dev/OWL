@@ -1,10 +1,10 @@
 # O.W.L - Operations Workflow Lookout
 
-An intelligent monitoring tool that watches over your GitLab CI/CD and DevSecOps ecosystem with the precision and wisdom of an owl.
-
 <div align="center">
   <img src="./assets/images/owl-logo.png" alt="O.W.L Logo" width="200">
 </div>
+
+An intelligent monitoring tool that watches over your GitLab CI/CD and DevSecOps ecosystem with the precision and wisdom of an owl.
 
 ## 🦉 Project Vision
 
