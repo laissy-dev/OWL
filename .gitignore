@@ -1,0 +1,43 @@
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+
+# Testing
+coverage
+
+# Next.js
+.next/
+out/
+build
+dist
+
+# Misc
+.DS_Store
+*.pem
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Docker volumes
+docker/**/data
+docker/**/*.log
+docker/grafana/data
+docker/prometheus/data
+docker/sonarqube/data
+docker/postgres_data
+docker/redis_data
+
+# IDE
+.idea
+.vscode
+*.swp

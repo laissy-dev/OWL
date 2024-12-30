@@ -1,0 +1,73 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: owl_postgres
+    environment:
+      POSTGRES_USER: owl
+      POSTGRES_PASSWORD: owl_password
+      POSTGRES_DB: owl_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - owl_network
+
+  redis:
+    image: redis:latest
+    container_name: owl_redis
+    ports:
+      - "6379:6379"
+    networks:
+      - owl_network
+
+  sonarqube:
+    image: sonarqube:community
+    container_name: owl_sonarqube
+    ports:
+      - "9000:9000"
+    environment:
+      - SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true
+    volumes:
+      - sonarqube_data:/opt/sonarqube/data
+      - sonarqube_extensions:/opt/sonarqube/extensions
+      - sonarqube_logs:/opt/sonarqube/logs
+    networks:
+      - owl_network
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: owl_prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+    networks:
+      - owl_network
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: owl_grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=owl_password
+    volumes:
+      - grafana_data:/var/lib/grafana
+    depends_on:
+      - prometheus
+    networks:
+      - owl_network
+
+volumes:
+  postgres_data:
+  sonarqube_data:
+  sonarqube_extensions:
+  sonarqube_logs:
+  grafana_data:
+
+networks:
+  owl_network:
+    driver: bridge
