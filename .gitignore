@@ -28,15 +28,6 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
-# Docker volumes
-docker/**/data
-docker/**/*.log
-docker/grafana/data
-docker/prometheus/data
-docker/sonarqube/data
-docker/postgres_data
-docker/redis_data
-
 # IDE
 .idea
 .vscode
