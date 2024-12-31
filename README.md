@@ -8,106 +8,90 @@
 
 ## 🦉 Project Vision
 
-O.W.L provides a 360° view of DevSecOps operations, monitoring every aspect of your workflows with owl-like precision. From pipeline supervision to security analysis, O.W.L is your vigilant sentinel.
+O.W.L provides a 360° view of DevSecOps operations, monitoring every aspect of your GitLab CI/CD workflows with owl-like precision. From pipeline supervision to security analysis, O.W.L is your vigilant sentinel.
 
 ## ✨ Key Features
 
 ### 🔍 Night Vision (Real-time Monitoring)
 
-* Real-time pipeline monitoring
-* Instant anomaly detection
-* Performance tracking
-* Smart alerts
+- Real-time pipeline monitoring
+- Instant anomaly detection
+- Performance tracking
+- Smart alerts
 
 ### 🌐 360° View (Global Overview)
 
-* **Pipeline Monitor**
-  
-  * Multi-stage pipeline tracking
-  * Build status and metrics
-  * Test results and coverage
-  * Deployment status
-
-* **Security Watchtower**
-  
-  * SAST/DAST monitoring
-  * Container security
-  * Dependency scanning
-  * Secret detection
-  * License compliance
-
-* **Nest Monitor (Environments)**
-  
-  * Docker/Podman supervision
-  * Runner status
-  * Resource utilization
-  * Registry monitoring
+- **Pipeline Monitor**
+  - Multi-stage pipeline tracking
+  - Build status and metrics
+  - Test results and coverage
+  - Deployment status
+- **Security Watchtower**
+  - SAST/DAST monitoring
+  - Container security
+  - Dependency scanning
+  - Secret detection
+  - License compliance
 
 ### 🧠 Owl Intelligence (Smart Analytics)
 
-* Performance metrics
-* Predictive analytics
-* Resource optimization
-* Cost analysis
-* Trend detection
+- Performance metrics
+- Predictive analytics
+- Resource optimization
+- Cost analysis
+- Trend detection
 
 ## 🛠️ Technical Stack
 
-### Main Nest (Frontend)
+### Frontend (Vercel)
 
-* React/TypeScript
-* TailwindCSS
-* D3.js
-* Socket.IO client
-* Material-UI
+- Next.js/TypeScript
+- TailwindCSS
+- D3.js
+- Material-UI
 
-### Nest Foundation (Backend)
+### Backend (Freebox Delta Server)
 
-* Node.js/Express
-* PostgreSQL
-* Redis
-* Socket.IO
-* GitLab API
+- Node.js/Express
+- PostgreSQL
+- Redis
+- GitLab API integration
 
-### Hunting Tools (DevSecOps Tools)
+### Security & Monitoring
 
-* Docker/Podman
-* Kubernetes
-* SonarQube
-* OWASP ZAP
-* Trivy
-* Snyk
+- Docker/Podman
+- SonarQube
+- OWASP ZAP
+- Prometheus/Grafana
 
-### Owl Eyes (Monitoring)
+## 📐 Architecture
 
-* Prometheus
-* Grafana
-* ELK Stack
-* Jaeger
-
-## 🦉 Why O.W.L?
-
-O.W.L embodies the qualities of an owl:
-
-* Sharp Vision: Precise monitoring
-* Silent Watch: Optimal performance
-* Wisdom: Intelligent analytics
-* Night Vision: Hidden issue detection
+For a detailed view of O.W.L's architecture, consult [ARCHITECTURE.md](ARCHITECTURE.md)
 
 ## 🚀 Quick Start
 
 ```bash
-# Clone the nest
+#Clone the nest
+
 git clone https://github.com/laissy-dev/owl
 
 # Install dependencies
-cd owl
+
+cd owl/app
 npm install
 
-# Configure your perch
+# Configure environment
+
 cp .env.example .env
 
-# Take flight (development)
+# Launch services
+
+cd ../docker
+docker-compose up -d
+
+# Start development
+
+cd ../app
 npm run dev
 ```
 
