@@ -2,6 +2,7 @@
 
 ## 🏗️ Project Structure
 
+```
 O.W.L/
 ├── Frontend (Next.js - Vercel)
 │ ├── Dashboard/
@@ -101,8 +102,9 @@ O.W.L/
 │ - CI/CD configs
 │ - Backup strategy
 │ - Monitoring setup
+```
 
-__________________
+---
 
 ## 🔌 System Integration
 
