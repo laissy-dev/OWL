@@ -66,7 +66,7 @@ O.W.L provides a 360° view of DevSecOps operations, monitoring every aspect of 
 
 ## 📐 Architecture
 
-For a detailed view of O.W.L's architecture, consult [ARCHITECTURE.md](ARCHITECTURE.md)
+For a detailed view of O.W.L's architecture, consult [Architecture.md](Architecture.md)
 
 ## 🚀 Quick Start
 
