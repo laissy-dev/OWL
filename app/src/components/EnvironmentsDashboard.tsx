@@ -33,10 +33,10 @@ export default function EnvironmentsDashboard() {
         }
 
         setLoading(false);
-      } catch (err) {
-        setError('Failed to load data');
+        } catch (err: any) { 
+        setError(err.message || 'Failed to load data');
         setLoading(false);
-      }
+        }
     };
 
     loadData();
