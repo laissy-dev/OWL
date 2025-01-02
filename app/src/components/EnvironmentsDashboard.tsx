@@ -33,7 +33,7 @@ export default function EnvironmentsDashboard() {
         }
 
         setLoading(false);
-        } catch (error: unknown) {  // using unknown is more type-safe than any
+        } catch (_) {
         setError('Failed to load data');
         setLoading(false);
         }
