@@ -1,6 +1,5 @@
-export const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://192.168.1.40:3001';
+export const API_URL = 'http://192.168.1.40:3001';
 
-// Environnements
 export const fetchEnvironments = async () => {
   const response = await fetch(`${API_URL}/api/environments`);
   if (!response.ok) throw new Error('Failed to fetch environments');
